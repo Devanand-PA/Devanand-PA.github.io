@@ -1,0 +1,11 @@
+body {
+	background-color : #002327;
+	color : #00b2c6 ;
+}
+div {
+	color :#5a5a2d ;
+	width: 75vw; /* Set your desired width */
+    	margin: auto; /* Set left and right margins to auto for horizontal centering */
+    	border-color: #148208; /* Example background color */
+	text-align: center ;
+}
