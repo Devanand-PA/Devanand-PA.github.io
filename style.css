@@ -3,6 +3,7 @@ body {
 	color : #00b2c6 ;
 }
 div {
+	background-color : #000000;
 	color :#5a5a2d ;
 	width: 75vw; /* Set your desired width */
     	margin: auto; /* Set left and right margins to auto for horizontal centering */
