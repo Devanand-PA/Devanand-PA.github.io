@@ -1,12 +1,30 @@
 body {
-	background-color : #002327;
-	color : #00b2c6 ;
+	background-color : #0a0b16;
+	color :#a0a6c2 ;
 }
-div {
-	background-color : #000000;
-	color :#5a5a2d ;
+
+.bigBox {
+	margin-bottom: 5vw;
+	padding-top: 5vw;
+	background-color : #0a0b16;
+	color :#a0a6c2 ;
 	width: 75vw; /* Set your desired width */
     	margin: auto; /* Set left and right margins to auto for horizontal centering */
-    	border-color: #148208; /* Example background color */
+	text-align: center ;
+}
+
+.innerText {
+	border: 1px solid white;
+	border-radius : 20px;
+}
+.linkBox {
+	border-radius : 0.75vw;
+	background-color : #463b5b;
+	color :#a0a6c2 ;
+	display: inline-block;
+	padding: 5px 20px;
+	width: auto; /* Set your desired width */
+    	margin: auto; /* Set left and right margins to auto for horizontal centering */
+    	/*border-color: #3a4d88;  Example background color */
 	text-align: center ;
 }
