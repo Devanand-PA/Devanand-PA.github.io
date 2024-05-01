@@ -5,6 +5,26 @@
     <link rel="stylesheet" href="style.css">
 <div class="bigBox">
 <div class=innerText>
+ <h1>Directory Listing</h1>
+    <ul>
+
+	      <?php
+        // Replace 'path/to/your/directory' with the actual path
+        $dir = 'path/to/your/directory';
+        
+        // Get the list of files and directories
+        $files = scandir($dir);
+        
+        // Output each file/directory as a list item
+        foreach($files as $file) {
+            if ($file != '.' && $file != '..') {
+                echo "<li><a href='$dir/$file'>$file</a></li>";
+            }
+        }
+        ?>
+    </ul>
+
+
 <a href="./novels.html" class="linkBox"><h2 id="novels-and-other-literature">Novels and other literature</h2></a>
 <p>I like to write stuff. I was, at some point ,wondering if I should
 take up writing as a profession, and in that frenzy I was looking up for
@@ -20,7 +40,6 @@ if no one looked at them. After all , I was doing this for myself , not
 to mention the fact that I don’t even have to pay to keep the website
 running.</p>
 </div>
-<script src="test.js">
 
 </div>
 <div class="bigBox">
