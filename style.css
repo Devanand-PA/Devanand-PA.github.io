@@ -4,12 +4,8 @@ body {
 }
 
 .bigBox {
-	margin-bottom: 5vw;
-	padding-top: 5vw;
 	background-color : #0a0b16;
 	color :#a0a6c2 ;
-	width: 75vw; /* Set your desired width */
-    	margin: auto; /* Set left and right margins to auto for horizontal centering */
 	text-align: center ;
 }
 
@@ -22,9 +18,5 @@ body {
 	background-color : #463b5b;
 	color :#a0a6c2 ;
 	display: inline-block;
-	padding: 5px 20px;
-	width: auto; /* Set your desired width */
-    	margin: auto; /* Set left and right margins to auto for horizontal centering */
-    	/*border-color: #3a4d88;  Example background color */
 	text-align: center ;
 }
