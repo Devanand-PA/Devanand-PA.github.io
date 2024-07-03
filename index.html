@@ -15,8 +15,8 @@
 <style>
 	/* Dropdown Button */
 	.dropbtn {
-		background-color: #04AA6D;
-		color: white;
+		/* background-color: #04AA6D; */
+		/* color: white; */
 		padding: 16px;
 		font-size: 16px;
 		border: none;
@@ -62,8 +62,8 @@
 	}
 </style>
 
-<body>
-	<h1>Here are some things I like</h1>
+<body style='background-color:#bbbbbb'>
+	<h1>Here are some things I like:</h1>
 	<div class="dropdown">
 		<button class="dropbtn">Literature</button>
 		<div class="dropdown-content">
@@ -81,30 +81,42 @@
 			<a href="./cs_stuff/LLMs/intro.html">LLMs</a>
 		</div>
 	</div>
-	<!-- <table border="1"> -->
-	<!-- 	<tr> -->
-	<!-- 		<th> -->
-	<!-- 			<a href='./literature.html'> -->
-	<!-- 				Literature -->
-	<!-- 			</a> -->
-	<!-- 		</th> -->
-	<!---->
-	<!-- 		<th> -->
-	<!-- 			<a href='./cs_stuff.html'> -->
-	<!-- 				Some CS Stuff -->
-	<!-- 			</a> -->
-	<!-- 		</th> -->
-	<!-- 	</tr> -->
-	<!-- </table> -->
 
-	<h1>If you're not interested in all that , check these out</h1>
-	<ul>
-		<li><a href='https://youtu.be/WXmVve8BavU'> Brian Lunduke getting excited over a new web browser </a>
-		</li>
-		<br>
-		<li><a href='https://youtu.be/IM2VIKfaY0Y'> An account of western perception of japanese culture</a>
-		</li>
-	</ul>
+	<div class="dropdown">
+		<button class="dropbtn">Blogs</button>
+		<div class="dropdown-content">
+			<a href="./blogs/highlighted.html">Highlighted blogs</a>
+			<a href="./blogs/all_blogs_list.html">All Blogs</a>
+		</div>
+	</div>
+	<h1>If you're not interested in all that , check these out :</h1>
+	<div style='float: left'>
+		<h2>Some interesting things to watch</h2>
+		<h3>
+			<ul>
+				<li><a href='https://youtu.be/WXmVve8BavU'> Brian Lunduke getting excited over a new web
+						browser
+					</a>
+				</li>
+				<br>
+				<li><a href='https://youtu.be/IM2VIKfaY0Y'> An account of Western perception of Japanese
+						culture</a>
+				</li>
+			</ul>
+		</h3>
+	</div>
+
+	<div style='float : right ; border-left: 4mm ridge rgba(100, 100, 50, .6);'>
+		<h2>Some highlights on this page</h2>
+		<h3>
+			<ul>
+				<li><a href="./literature/multiroz/multiroz.html">Multiroz WebNovel</a></li>
+				<br>
+				<li><a href="./blogs/all_blogs_list.html">All Blogs</a></li>
+			</ul>
+		</h3>
+
+	</div>
 </body>
 
 </html>
