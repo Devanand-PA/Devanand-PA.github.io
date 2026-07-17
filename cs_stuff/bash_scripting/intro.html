@@ -59,7 +59,7 @@
 	<ol>
 		<li><a href="#ToC_link">Table of Contents</a></li>
 		<li><a href="#heading-1">About the Terminal</a></li>
-		<li><a href="">About the Shell</a></li>
+		<li><a href="#heading-2">About the Shell</a></li>
 		<li><a href="">The Shell as a File Manager</a></li>
 		<li><a href="">Running Commands in the Shell</a></li>
 		<li><a href="">The PATH to commands</a></li>
@@ -111,7 +111,7 @@
 	Now I must clarify again, when you open a terminal emulator on your desktop, all the text you are seeing are being "rendered" by the terminal, but the "shell" is the one telling the terminal to render that so that it can , well, fulfill it's purpose.
 
 
-	<h2 id="heading-1"> About the Shell </h2>
+	<h2 id="heading-2"> About the Shell </h2>
 
 	Since there are so many shells in unix like OSes, we'll keep things simple and restrict out discussions to bash. Of course, you are free to use the python shell or the c shell or even the Holy C shell if you like, but they have slight syntactic differences, though they all function in the same way.
 	<p>
@@ -135,7 +135,10 @@
 			<li> a path to a file</li>
 			<li> a filepath once completed with one of the directories listed in a variable called "PATH" </li>
 		</ul>
+		(in general, if the first argument is not a shell function/builtin/alias, then it is treated as a filepath, and the shell checks if it is executable. If it is , it tries to run the program specified in the filepath. In case you provide something that does not fulfil any of these conditions, the shell will just give you an error)
 	</ul>
+
+	<h2 id="heading-3">The Shell as a File Manager</h2>
 
 
 
