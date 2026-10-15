@@ -2,10 +2,53 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://example.org/blogs/highlighted/00000-blank/</loc>
+    <lastmod>2026-10-15T07:53:05+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://example.org/blogs/all_blogs_list/00001-intro/</loc>
+    <lastmod>2026-10-15T07:53:05+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://example.org/blogs/</loc>
+    <lastmod>2026-10-15T07:53:05+00:00</lastmod>
+  </url><url>
+    <loc>https://example.org/blogs/all_blogs_list/</loc>
+    <lastmod>2026-10-15T07:53:05+00:00</lastmod>
+  </url><url>
+    <loc>https://example.org/blogs/highlighted/</loc>
+    <lastmod>2026-10-15T07:53:05+00:00</lastmod>
+  </url><url>
+    <loc>https://example.org/</loc>
+    <lastmod>2026-10-15T07:53:05+00:00</lastmod>
+  </url><url>
+    <loc>https://example.org/blogs/all_blogs_list/00003-on_immaturity/</loc>
+    <lastmod>2026-10-15T07:53:05+00:00</lastmod>
+  </url><url>
+    <loc>https://example.org/blogs/all_blogs_list/00002-jobintro/</loc>
+    <lastmod>2026-10-15T07:53:05+00:00</lastmod>
+  </url><url>
+    <loc>https://example.org/blogs/all_blogs_list/00000-blank/</loc>
+    <lastmod>2026-10-15T07:53:04+00:00</lastmod>
+  </url><url>
+    <loc>https://example.org/cs_stuff/</loc>
+    <lastmod>2026-10-15T07:53:04+00:00</lastmod>
+  </url><url>
+    <loc>https://example.org/cs_stuff/bash_scripting/intro/</loc>
+    <lastmod>2026-10-15T07:53:04+00:00</lastmod>
+  </url><url>
+    <loc>https://example.org/literature/why-am-i-under-equipped-even-though-my-life-is-below-my-expectations-/chapter_001/001/</loc>
+    <lastmod>2026-10-15T07:53:02+00:00</lastmod>
+  </url><url>
+    <loc>https://example.org/literature/</loc>
+    <lastmod>2026-10-15T07:53:02+00:00</lastmod>
+  </url><url>
+    <loc>https://example.org/literature/dendaro/dendaro/</loc>
+    <lastmod>2026-10-15T07:53:02+00:00</lastmod>
+  </url><url>
+    <loc>https://example.org/literature/multiroz/multiroz/</loc>
+    <lastmod>2026-10-15T07:53:02+00:00</lastmod>
+  </url><url>
+    <loc>https://example.org/categories/</loc>
+  </url><url>
+    <loc>https://example.org/tags/</loc>
   </url>
 </urlset>

@@ -7,41 +7,71 @@
   <link rel="stylesheet" href="{{ "style.css" | absURL }}">
 </head>
 <body>
-  <header>
-    <a href="{{ "index.html" | absURL }}"><img class="logo" src="{{ "devnull.webp" | absURL }}" alt="logo"></a>
-    <h1>Here are some things I do <br> (For all the 5 people in the world who care about that , and that list does not include me):</h1>
-    <!-- navigation dropdowns -->
-    <div class="dropdown">
-      <button class="dropbtn">Literature</button>
-      <div class="dropdown-content">
-        <a href="./literature/multiroz/multiroz.html">Multiroz WebNovel</a>
-        <a href="./literature/dendaro/dendaro.html">Dendaro WebNovel</a>
-      </div>
-    </div>
-    <div class="dropdown">
-      <button class="dropbtn">Some CS Stuff</button>
-      <div class="dropdown-content">
-        <a href="./cs_stuff/bash_scripting/intro.html">Bash Scripting</a>
-        <a href="./cs_stuff/python_scripting/intro.html">Python Scripting</a>
-        <a href="./cs_stuff/LLMs/intro.html">LLMs</a>
-      </div>
-    </div>
-    <div class="dropdown">
-      <button class="dropbtn">Blogs</button>
-      <div class="dropdown-content">
-        <a href="./blogs/highlighted.html">Highlighted blogs</a>
-        <a href="./blogs/all_blogs_list.html">All Blogs</a>
-      </div>
-    </div>
-    <div class="dropdown">
-      <button class="dropbtn">Science Stuff</button>
-      <div class="dropdown-content">
-        <a href="./blogs/highlighted.html">Learning Classical Physics</a>
-        <a href="./blogs/all_blogs_list.html">Learning Electrodynamics</a>
-      </div>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="{{ "/" | absURL }}" class="site-logo">
+        <img src="{{ "devnull.webp" | absURL }}" alt="Logo">
+      </a>
+      <h1 class="site-title">Here are some things I do <br> (For all the 5 people in the world who care about that , and that list does not include me):</h1>
+      <nav class="site-nav">
+        <!-- dropdowns -->
+        <div class="dropdown">
+          <button class="dropbtn">Literature</button>
+          <div class="dropdown-content">
+            <a href="{{ "literature/multiroz/" | relURL }}">Multiroz WebNovel</a>
+            <a href="{{ "literature/dendaro/" | relURL }}">Dendaro WebNovel</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">Some CS Stuff</button>
+          <div class="dropdown-content">
+            <a href="{{ "cs_stuff/bash_scripting/" | relURL }}">Bash Scripting</a>
+            <a href="{{ "cs_stuff/python_scripting/" | relURL }}">Python Scripting</a>
+            <a href="{{ "cs_stuff/LLMs/" | relURL }}">LLMs</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">Blogs</button>
+          <div class="dropdown-content">
+            <a href="{{ "blogs/highlighted/" | relURL }}">Highlighted blogs</a>
+            <a href="{{ "blogs/all_blogs_list/" | relURL }}">All Blogs</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">Science Stuff</button>
+          <div class="dropdown-content">
+            <a href="{{ "blogs/highlighted/" | relURL }}">Learning Classical Physics</a>
+            <a href="{{ "blogs/all_blogs_list/" | relURL }}">Learning Electrodynamics</a>
+          </div>
+        </div>
+      </nav>
     </div>
   </header>
 
-  {{ block "main" . }}{{ end }}
+  {{ if .IsHome }}
+  <section class="hero">
+    <h1>{{ .Site.Title }}</h1>
+    <p>A collection of interesting reads, code, and notes.</p>
+  </section>
+
+  <section class="updates">
+    <h2>Latest Updates</h2>
+    {{ $pages := where .Site.RegularPages "Type" "in" (slice "blogs" "literature" "cs_stuff") }}
+    <p>Found {{ $pages | len }} pages.</p>
+    {{ $pages := $pages | first 10 }}
+    <ul class="update-list">
+      {{ range $pages }}
+      <li>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        <small> — {{ .Date.Format "Jan 2, 2006" }}</small>
+      </li>
+      {{ end }}
+    </ul>
+  </section>
+  {{ else }}
+  <main>
+    {{ block "main" . }}{{ end }}
+  </main>
+  {{ end }}
 </body>
 </html>
