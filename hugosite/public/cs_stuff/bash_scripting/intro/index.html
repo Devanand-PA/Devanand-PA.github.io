@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Table of Contents – Devanand P A</title>
+  <link rel="icon" href="https://Devanand-PA.github.io/devnull_favicon.webp">
+  <link rel="stylesheet" href="https://Devanand-PA.github.io/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="https://Devanand-PA.github.io/" class="site-logo">
+        <img src="https://Devanand-PA.github.io/devnull.webp" alt="Logo">
+      </a>
+      <h1 class="site-title">Here are some things I do <br> (For all the 5 people in the world who care about that , and that list does not include me):</h1>
+      <nav class="site-nav">
+        
+        <div class="dropdown">
+          <button class="dropbtn">Literature</button>
+          <div class="dropdown-content">
+            <a href="/literature/multiroz/">Multiroz WebNovel</a>
+            <a href="/literature/dendaro/">Dendaro WebNovel</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">Some CS Stuff</button>
+          <div class="dropdown-content">
+            <a href="/cs_stuff/bash_scripting/">Bash Scripting</a>
+            <a href="/cs_stuff/python_scripting/">Python Scripting</a>
+            <a href="/cs_stuff/LLMs/">LLMs</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">Blogs</button>
+          <div class="dropdown-content">
+            <a href="/blogs/highlighted/">Highlighted blogs</a>
+            <a href="/blogs/all_blogs_list/">All Blogs</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">Science Stuff</button>
+          <div class="dropdown-content">
+            <a href="/blogs/highlighted/">Learning Classical Physics</a>
+            <a href="/blogs/all_blogs_list/">Learning Electrodynamics</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  
+  <main>
+    
+<article>
+  <h1>Table of Contents</h1>
+  <p><small>Oct 15, 2026</small></p>
+  <div><p><code>&lt;style&gt; code { background-color : #000000; } &lt;/style&gt;</code>{=html}</p>
+<h1 id="ToC_link">Table of Contents</h1>
+<ol>
+<li><a href="#ToC_link">Table of Contents</a></li>
+<li><a href="#heading-1">About the Terminal</a></li>
+<li><a href="#heading-2">About the Shell</a></li>
+<li><a href="">The Shell as a File Manager</a></li>
+<li><a href="">Running Commands in the Shell</a></li>
+<li><a href="">The PATH to commands</a></li>
+<li><a href="">simple logic in bash</a></li>
+<li><a href="">Bang! Bang! She-Bang!</a></li>
+</ol>
+<h2 id="heading-1">About the Terminal</h2>
+<p>If you're reading this, chances are that you have come across a terminal already. A terminal is , at the most basic level, some medium that displays some kind of information. When we talk about the first computers, which were made well over half a century ago, we talk about terminals that used paper to produce output and used punched cards to take input.</p>
+<p>Nowadays, most terminals render output to a screen. The ones we are talking about here in particular, are the ones that are present in most unix like operating systems. They output to a screen, but usually , when one talks of say, a linux terminal, one doesn't talk of high end graphics. The point I am trying to make is that most terminals output plain text, and usually nothing more than plain text. (There are some exceptions , such as sixel, as well as kitty's protocols, etc)</p>
+<p>Most unix like operating systems have a built in terminal even if they don't have graphical output. This terminal judges what kind of output to give depending on what devices are available. The &quot;terminal&quot; here is simply a program that can output text to a screen and take in input. By itself, it doesn't do much, but the best part about it is that we can write programs to tell it what to output and when to take in input. A classic example of such a program that takes advantage of the terminal is the classic &quot;hello world&quot; program, which is usually the first program that people write regardless of which programming language they are writing in. However, we can make it do a lot of other things as well.</p>
+<p>Another example is say, a login screen, where the terminal asks the user for input (their username and password), passing those values back to the &quot;login screen&quot; program to check the credentials. Now there is a lot you can do just by outputting and manipulating text. For example, you can control the operating system itself. And this is actually a common use case. In fact the programs that allow you to control your operating system using a terminal are called &quot;system shells&quot;.</p>
+<p>Now , using the default &quot;linux terminal&quot; (or more accurately, the &quot;linux console&quot;) might be a headache , because by default it provides only one (actually 12, from F1..F12) screens for you to do anything with. The workings of this &quot;console&quot; are more &quot;internal&quot; than regular programs, but for now we need something that can do the same things that the &quot;console&quot; can do, but without the restrictions of having to stay without a GUI (ever !) and having only one screen to stare at.</p>
+<p><img src="/home/devanandpa/.hermes/cache/scratch/tmp.IDrfYBVnNd/17d0bfd8660e3969d22e4b569ed8c1c44ade39b5.png" alt="The linux console"></p>
+<p>That is where a &quot;Terminal Emulator&quot; comes in. Simply put, it is a regular program that mimics the linux console. And just like the linux console, it is also, a &quot;terminal&quot; , in that it's job is also simply to display text and take in text input. And again, that is all you need.</p>
+<p>Now, while the linux console starts with a &quot;login screen&quot; (called the &quot;login shell&quot;, because it too, &quot;controls&quot; the operating system in a way), most terminal emulators default to more &quot;standard&quot; system shells.</p>
+<p>What do I mean by &quot;standard&quot; ? Well for one, there's the POSIX standard, but some of these shells do not abide by it, but what I am talking about is the fact that these shells follow a similar structure. That is , they are a programming language with easy access to the operating system's internal functions.</p>
+<p>The &quot;shells&quot; are programs that use the terminal (in this case, the terminal emulator) as a means to communicate with the user. Among the system shells in unix like OSes, bash is probably the most well known. Now I must clarify again, when you open a terminal emulator on your desktop, all the text you are seeing are being &quot;rendered&quot; by the terminal, but the &quot;shell&quot; is the one telling the terminal to render that so that it can , well, fulfill it's purpose.</p>
+<h2 id="heading-2">About the Shell</h2>
+<p>Since there are so many shells in unix like OSes, we'll keep things simple and restrict out discussions to bash. Of course, you are free to use the python shell or the c shell or even the Holy C shell if you like, but they have slight syntactic differences, though they all function in the same way.</p>
+<p>Now before we move forward, we need to make sure that everybody is using &quot;bash&quot;. for that, simply open a terminal and type &quot;bash&quot; into it. It should probably open bash, because it should be installed by default. If that doesn't work, just type &quot;sh&quot; and we'll do with that for now.</p>
+<p>Now whichever shell you found yourself in, it follows some general rules. Try typing random things in it and press enter and see what happens. You might find out that some things seem to do something while others return an error.</p>
+<p>Why is that ?</p>
+<p>Well, like I said ,most shells follow some basic rules.</p>
+<ul>
+<li>
+<p>each &quot;word&quot; separated by one or more whitespaces is considered an &quot;argument&quot; (it is possible to write literal whitespaces using <code>&quot; &quot;</code> or <code>' '</code> or just <code>\ </code>)</p>
+</li>
+<li>
+<p>the first argument is searched up until it turns out to be one among the following</p>
+<ul>
+<li>a builtin function of the shell</li>
+<li>a user defined function</li>
+<li>a user defined &quot;alias&quot;</li>
+<li>a path to a file</li>
+<li>a filepath once completed with one of the directories listed in a variable called &quot;PATH&quot;</li>
+</ul>
+<p>(in general, if the first argument is not a shell function/builtin/alias, then it is treated as a filepath, and the shell checks if it is executable. If it is , it tries to run the program specified in the filepath. In case you provide something that does not fulfil any of these conditions, the shell will just give you an error)</p>
+</li>
+</ul>
+<h2 id="heading-3">The Shell as a File Manager</h2>
+</div>
+</article>
+
+  </main>
+  
+</body>
+</html>
