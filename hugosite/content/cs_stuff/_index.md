@@ -6,4 +6,4 @@ date: 2026-10-15T07:53:04Z
 
 - [Bash Scripting](/cs_stuff/bash_scripting/)
 - [Python Scripting](/cs_stuff/python_scripting/)
-- [LLMs](/cs_stuff/LLMs/)
+- [LLMs](/cs_stuff/llms/)

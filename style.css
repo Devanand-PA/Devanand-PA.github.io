@@ -27,6 +27,24 @@ a{color:var(--accent-2);text-decoration:none}
 a:hover{text-decoration:underline}
 img{max-width:100%;display:block}
 
+/* Code */
+code{
+  background-color:#000000;
+  color:var(--text);
+  padding:.15rem .4rem;
+  border-radius:6px;
+  font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+  font-size:.9em;
+}
+pre{
+  background-color:#000000;
+  border:1px solid var(--border);
+  border-radius:10px;
+  padding:1rem 1.2rem;
+  overflow-x:auto;
+}
+pre code{background:transparent;padding:0}
+
 /* Header */
 .site-header{
   position:sticky;top:0;z-index:1000;
