@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Bash Scripting - HTML Converted – Devanand P A</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="icon" href="http://localhost:1313/devnull_favicon.webp">
+  <link rel="stylesheet" href="http://localhost:1313/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="http://localhost:1313/" class="site-logo">
+        <img src="http://localhost:1313/devnull.webp" alt="Logo">
+      </a>
+      <h1 class="site-title">Here are some things I do <br> <span class="subtitle">(For all the 5 people in the world who care about that , and that list does not include me)</span></h1>
+      <nav class="site-nav">
+        <div class="dropdown">
+          <button class="dropbtn">Literature</button>
+          <div class="dropdown-content">
+            <a href="/literature/multiroz/">Multiroz WebNovel</a>
+            <a href="/literature/dendaro/">Dendaro WebNovel</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">Some CS Stuff</button>
+          <div class="dropdown-content">
+            <a href="/cs_stuff/bash_scripting_html/">Bash Scripting</a>
+            <a href="/cs_stuff/python_scripting/">Python Scripting</a>
+            <a href="/cs_stuff/llms/">LLMs</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">Blogs</button>
+          <div class="dropdown-content">
+            <a href="/blogs/highlighted/">Highlighted blogs</a>
+            <a href="/blogs/all_blogs_list/">All Blogs</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">Science Stuff</button>
+          <div class="dropdown-content">
+            <a href="/blogs/highlighted/">Learning Classical Physics</a>
+            <a href="/blogs/all_blogs_list/">Learning Electrodynamics</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  
+
+  <main class="content">
+    
+<article>
+  <h1>Bash Scripting - HTML Converted</h1>
+  <h1 id="table-of-contents">Table of Contents</h1>
+<p>[Oct 15, 2026]{.small}</p>
+<p>::::::::::::::::::::::::::::::::::::::::: {}
+<code>&lt;style&gt; code { background-color : #000000; } &lt;/style&gt;</code>{=html}</p>
+<h1 id="ToC_link">Table of Contents</h1>
+<ol>
+<li><a href="#ToC_link">Table of Contents</a></li>
+<li><a href="#heading-1">About the Terminal</a></li>
+<li><a href="#heading-2">About the Shell</a></li>
+<li><a href="#heading-3">The Shell as a File Manager</a></li>
+<li><a href="#heading-4">Running Commands in the Shell</a></li>
+<li><a href="#heading-5">The PATH to commands</a></li>
+<li><a href="#heading-6">simple logic in bash</a></li>
+<li><a href="#heading-7">Bang! Bang! She-Bang!</a></li>
+</ol>
+<h2 id="heading-1">About the Terminal</h2>
+<p>If you're reading this, chances are that you have come across a terminal already. A terminal is , at the most basic level, some medium that displays some kind of information. When we talk about the first computers, which were made well over half a century ago, we talk about terminals that used paper to produce output and used punched cards to take input.</p>
+<p>Nowadays, most terminals render output to a screen. The ones we are talking about here in particular, are the ones that are present in most unix like operating systems. They output to a screen, but usually , when one talks of say, a linux terminal, one doesn't talk of high end graphics. The point I am trying to make is that most terminals output plain text, and usually nothing more than plain text. (There are some exceptions , such as sixel, as well as kitty's protocols, etc)</p>
+<p>Most unix like operating systems have a built in terminal even if they don't have graphical output. This terminal judges what kind of output to give depending on what devices are available. The &quot;terminal&quot; here is simply a program that can output text to a screen and take in input. By itself, it doesn't do much, but the best part about it is that we can write programs to tell it what to output and when to take in input. A classic example of such a program that takes advantage of the terminal is the classic &quot;hello world&quot; program, which is usually the first program that people write regardless of which programming language they are writing in. However, we can make it do a lot of other things as well.</p>
+<p>Another example is say, a login screen, where the terminal asks the user for input (their username and password), passing those values back to the &quot;login screen&quot; program to check the credentials. Now there is a lot you can do just by outputting and manipulating text. For example, you can control the operating system itself. And this is actually a common use case. In fact the programs that allow you to control your operating system using a terminal are called &quot;system shells&quot;.</p>
+<p>Now , using the default &quot;linux terminal&quot; (or more accurately, the &quot;linux console&quot;) might be a headache , because by default it provides only one (actually 12, from F1..F12) screens for you to do anything with. The workings of this &quot;console&quot; are more &quot;internal&quot; than regular programs, but for now we need something that can do the same things that the &quot;console&quot; can do, but without the restrictions of having to stay without a GUI (ever !) and having only one screen to stare at.</p>
+<p><img src="/home/devanandpa/.hermes/cache/scratch/tmp.IDrfYBVnNd/17d0bfd8660e3969d22e4b569ed8c1c44ade39b5.png" alt="The linux console"></p>
+<p>That is where a &quot;Terminal Emulator&quot; comes in. Simply put, it is a regular program that mimics the linux console. And just like the linux console, it is also, a &quot;terminal&quot; , in that it's job is also simply to display text and take in text input. And again, that is all you need.</p>
+<p>Now, while the linux console starts with a &quot;login screen&quot; (called the &quot;login shell&quot;, because it too, &quot;controls&quot; the operating system in a way), most terminal emulators default to more &quot;standard&quot; system shells.</p>
+<p>What do I mean by &quot;standard&quot; ? Well for one, there's the POSIX standard, but some of these shells do not abide by it, but what I am talking about is the fact that these shells follow a similar structure. That is , they are a programming language with easy access to the operating system's internal functions.</p>
+<p>The &quot;shells&quot; are programs that use the terminal (in this case, the terminal emulator) as a means to communicate with the user. Among the system shells in unix like OSes, bash is probably the most well known. Now I must clarify again, when you open a terminal emulator on your desktop, all the text you are seeing are being &quot;rendered&quot; by the terminal, but the &quot;shell&quot; is the one telling the terminal to render that so that it can , well, fulfill it's purpose.</p>
+<h2 id="heading-2">About the Shell</h2>
+<p>Since there are so many shells in unix like OSes, we'll keep things simple and restrict out discussions to bash. Of course, you are free to use the python shell or the c shell or even the Holy C shell if you like, but they have slight syntactic differences, though they all function in the same way.</p>
+<p>Now before we move forward, we need to make sure that everybody is using &quot;bash&quot;. for that, simply open a terminal and type &quot;bash&quot; into it. It should probably open bash, because it should be installed by default. If that doesn't work, just type &quot;sh&quot; and we'll do with that for now.</p>
+<p>Now whichever shell you found yourself in, it follows some general rules. Try typing random things in it and press enter and see what happens. You might find out that some things seem to do something while others return an error.</p>
+<p>Why is that ?</p>
+<p>Well, like I said ,most shells follow some basic rules.</p>
+<ul>
+<li>
+<p>each &quot;word&quot; separated by one or more whitespaces is considered an &quot;argument&quot; (it is possible to write literal whitespaces using <code>&quot; &quot;</code> or <code>' '</code> or just <code>\ </code>)</p>
+</li>
+<li>
+<p>the first argument is searched up until it turns out to be one among the following</p>
+<ul>
+<li>a builtin function of the shell</li>
+<li>a user defined function</li>
+<li>a user defined &quot;alias&quot;</li>
+<li>a path to a file</li>
+<li>a filepath once completed with one of the directories listed in a variable called &quot;PATH&quot;</li>
+</ul>
+<p>(in general, if the first argument is not a shell function/builtin/alias, then it is treated as a filepath, and the shell checks if it is executable. If it is , it tries to run the program specified in the filepath. In case you provide something that does not fulfil any of these conditions, the shell will just give you an error)</p>
+</li>
+</ul>
+<h2 id="heading-3">The Shell as a File Manager</h2>
+<p>One of the most powerful aspects of the shell is its ability to function as a file manager. In fact, before graphical file managers existed, people managed their files entirely through the command line. Even today, many system administrators and developers prefer the shell for file management tasks because it&rsquo;s faster, more precise, and scriptable.</p>
+<p>When you open a shell, you&rsquo;re typically placed in your home directory. You can verify this by using the <code>pwd</code> command, which stands for &ldquo;print working directory&rdquo;:</p>
+<p>::: highlight</p>
+<pre tabindex="0"><code>pwd
+</code></pre><p>:::</p>
+<p>This will output something like <code>/home/yourusername</code>, showing you exactly where you are in the filesystem.</p>
+<p>To see what files and directories are in your current location, you use the <code>ls</code> command (short for &ldquo;list&rdquo;):</p>
+<p>::: highlight</p>
+<pre tabindex="0"><code>ls
+</code></pre><p>:::</p>
+<p>This will show you the contents of your current directory. For more detailed information, you can use the <code>-l</code> flag (for &ldquo;long format&rdquo;):</p>
+<p>::: highlight</p>
+<pre tabindex="0"><code>ls -l
+</code></pre><p>:::</p>
+<p>This will show you permissions, ownership, size, and modification time for each file and directory.</p>
+<p>You can also combine flags. For example, to see all files (including hidden ones that start with a dot) in long format:</p>
+<p>::: highlight</p>
+<pre tabindex="0"><code>ls -la
+</code></pre><p>:::</p>
+<p>Navigating between directories is done with the <code>cd</code> command (short for &ldquo;change directory&rdquo;). To go to a specific directory:</p>
+<p>::: highlight</p>
+<pre tabindex="0"><code>cd /path/to/directory
+</code></pre><p>:::</p>
+<p>To go up one directory level:</p>
+<p>::: highlight</p>
+<pre tabindex="0"><code>cd ..
+</code></pre><p>:::</p>
+<p>To go back to your home directory from anywhere:</p>
+<p>::: highlight</p>
+<pre tabindex="0"><code>cd
+</code></pre><p>:::</p>
+<p>Or equivalently:</p>
+<p>::: highlight</p>
+<pre tabindex="0"><code>cd ~
+</code></pre><p>:::</p>
+<p>The tilde (<code>~</code>) is a shorthand for your home directory.</p>
+<p>Creating directories is done with the <code>mkdir</code> command (short for &ldquo;make directory&rdquo;):</p>
+<p>::: highlight</p>
+<pre tabindex="0"><code>mkdir new_directory
+</code></pre><p>:::</p>
+<p>You can create multiple directories at once:</p>
+<p>::: highlight</p>
+<pre tabindex="0"><code>mkdir dir1 dir2 dir3
+</code></pre><p>:::</p>
+<p>Or create a directory tree with the <code>-p</code> flag (which creates parent directories as needed):</p>
+<p>::: highlight</p>
+<pre tabindex="0"><code>mkdir -p parent/child/grandchild
+</code></pre><p>:::</p>
+<p>Removing files and directories requires caution, as there&rsquo;s no trash bin in the shell by default. To remove a file:</p>
+<p>::: highlight</p>
+<pre tabindex="0"><code>rm filename
+</code></pre><p>:::</p>
+<p>To remove an empty directory:</p>
+<p>::: highlight</p>
+<pre tabindex="0"><code>rmdir directory_name
+</code></pre><p>:::</p>
+<p>To remove a directory and all its contents (use with extreme caution!):</p>
+<p>::: highlight</p>
+<pre tabindex="0"><code>rm -rf directory_name
+</code></pre><p>:::</p>
+<p>The <code>-r</code> flag means &ldquo;recursive&rdquo; (go into subdirectories) and <code>-f</code> means &ldquo;force&rdquo; (don&rsquo;t ask for confirmation).</p>
+<p>Copying files is done with the <code>cp</code> command:</p>
+<p>::: highlight</p>
+<pre tabindex="0"><code>cp source_file destination_file
+</code></pre><p>:::</p>
+<p>To copy a directory and all its contents:</p>
+<p>::: highlight</p>
+<pre tabindex="0"><code>cp -r source_directory destination_directory
+</code></pre><p>:::</p>
+<p>Moving or renaming files is done with the <code>mv</code> command:</p>
+<p>::: highlight</p>
+<pre tabindex="0"><code>mv old_name new_name
+</code></pre><p>:::</p>
+<p>Or to move a file to a different directory:</p>
+<p>::: highlight</p>
+<pre tabindex="0"><code>mv file.txt /path/to/destination/
+</code></pre><p>:::</p>
+<p>You can also move multiple files at once:</p>
+<p>::: highlight</p>
+<pre tabindex="0"><code>mv file1.txt file2.txt /path/to/destination/
+</code></pre><p>:::</p>
+<h2 id="heading-4">Running Commands in the Shell</h2>
+<p>Now that we understand how to navigate and manage files in the shell, let&rsquo;s look at how to actually run commands and programs.</p>
+<p>As we discussed earlier, when you type a command in the shell, it goes through a specific process to determine what to execute. Let&rsquo;s review that process with some practical examples.</p>
+<p>When you type a command like <code>ls</code>, the shell:</p>
+<ol>
+<li>Checks if <code>ls</code> is a builtin command (it&rsquo;s not in bash - <code>ls</code> is an external program)</li>
+<li>Checks if you&rsquo;ve defined a function named <code>ls</code> (you probably haven&rsquo;t)</li>
+<li>Checks if you&rsquo;ve created an alias for <code>ls</code> (many systems have <code>ls</code> aliased to <code>ls --color=auto</code> by default)</li>
+<li>Looks for <code>ls</code> as a file in the directories listed in your <code>PATH</code> variable</li>
+</ol>
+<p>Most of the commands you&rsquo;ll use daily are external programs stored in directories like <code>/bin</code>, <code>/usr/bin</code>, <code>/usr/local/bin</code>, etc. These are found through the <code>PATH</code> mechanism we&rsquo;ll discuss in the next section.</p>
+<p>Let&rsquo;s try running some simple commands to see how they work:</p>
+<p>::: highlight</p>
+<pre tabindex="0"><code>echo &#34;Hello, World!&#34;
+</code></pre><p>:::</p>
+<p>This will output the text &ldquo;Hello, World!&rdquo; to your terminal. The <code>echo</code> command simply prints its arguments.</p>
+<p>You can also combine commands using pipes and redirection, but we&rsquo;ll get to that in a later section.</p>
+<p>For now, let&rsquo;s look at how to run a command and capture its output. You can store the output of a command in a variable like this:</p>
+<p>::: highlight</p>
+<pre tabindex="0"><code>current_dir=$(pwd)
+echo &#34;You are currently in: $current_dir&#34;
+</code></pre><p>:::</p>
+<p>This runs the <code>pwd</code> command, captures its output, stores it in the variable <code>current_dir</code>, and then prints it.</p>
+<p>Another useful technique is running a command in the background. If you add an ampersand (<code>&amp;</code>) to the end of a command, it will run in the background:</p>
+<p>::: highlight</p>
+<pre tabindex="0"><code>sleep 30 &amp;
+</code></pre><p>:::</p>
+<p>This starts a <code>sleep</code> command that will wait for 30 seconds, but because it&rsquo;s running in the background, you&rsquo;ll immediately get your prompt back and can continue working.</p>
+<p>You can see what background jobs you have running with the <code>jobs</code> command:</p>
+<p>::: highlight</p>
+<pre tabindex="0"><code>jobs
+</code></pre><p>:::</p>
+<p>And you can bring a background job to the foreground with the <code>fg</code> command.</p>
+<h2 id="heading-5">The PATH to Commands</h2>
+<p>We mentioned the <code>PATH</code> variable briefly when discussing how the shell finds commands to execute. Let&rsquo;s take a closer look at this important concept.</p>
+<p>The <code>PATH</code> variable is an environment variable that contains a list of directories, separated by colons (<code>:</code>). When you type a command, the shell searches through each directory in your <code>PATH</code> (in order) looking for an executable file with that name.</p>
+<p>You can view your current <code>PATH</code> with:</p>
+<p>::: highlight</p>
+<pre tabindex="0"><code>echo $PATH
+</code></pre><p>:::</p>
+<p>This will output something like:</p>
+<pre tabindex="0"><code>/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+</code></pre><p>Each of these directories is searched in order when you type a command. So if you have a file named <code>myscript</code> in both <code>/usr/local/bin</code> and <code>/usr/bin</code>, the version in <code>/usr/local/bin</code> will be used because it comes first in the <code>PATH</code>.</p>
+<p>You can add directories to your <code>PATH</code> temporarily (for the current session) like this:</p>
+<p>::: highlight</p>
+<pre tabindex="0"><code>export PATH=&#34;$PATH:/new/directory&#34;
+</code></pre><p>:::</p>
+<p>Or to add a directory to the beginning of your <code>PATH</code> (so it&rsquo;s searched first):</p>
+<p>::: highlight</p>
+<pre tabindex="0"><code>export PATH=&#34;/new/directory:$PATH&#34;
+</code></pre><p>:::</p>
+<p>If you want to make this change permanent, you&rsquo;ll need to add the <code>export</code> command to your shell&rsquo;s startup file (like <code>~/.bashrc</code> or <code>~/.bash_profile</code>).</p>
+<p>Let&rsquo;s look at a practical example. Suppose you&rsquo;ve written a useful script and saved it in <code>~/scripts/mytool</code>. You could run it every time by typing the full path:</p>
+<p>::: highlight</p>
+<pre tabindex="0"><code>/home/yourusername/scripts/mytool
+</code></pre><p>:::</p>
+<p>But that&rsquo;s tedious. Instead, you can add <code>~/scripts</code> to your <code>PATH</code>:</p>
+<p>::: highlight</p>
+<pre tabindex="0"><code>export PATH=&#34;$PATH:$HOME/scripts&#34;
+</code></pre><p>:::</p>
+<p>Now you can simply type:</p>
+<p>::: highlight</p>
+<pre tabindex="0"><code>mytool
+</code></pre><p>:::</p>
+<p>And the shell will find it in your <code>~/scripts</code> directory.</p>
+<p>It&rsquo;s also worth noting that for security reasons, the current directory (<code>.</code>) is not included in the <code>PATH</code> by default. This means you can&rsquo;t run a script in the current directory just by typing its name. You need to explicitly specify the current directory:</p>
+<p>::: highlight</p>
+<pre tabindex="0"><code>./myscript
+</code></pre><p>:::</p>
+<p>The <code>./</code> means &ldquo;the current directory&rdquo;. This is a safety feature that prevents you from accidentally running a malicious script that might be disguised as a common command like <code>ls</code> or <code>cd</code>.</p>
+<h2 id="heading-6">Simple Logic in Bash</h2>
+<p>So far we&rsquo;ve looked at running individual commands, but the real power of the shell comes from being able to make decisions and repeat actions based on conditions. This is where bash&rsquo;s programming capabilities shine.</p>
+<p>Bash supports several types of conditional statements, with the most common being the <code>if</code> statement. Here&rsquo;s the basic syntax:</p>
+<p>::: highlight</p>
+<pre tabindex="0"><code>if [ condition ]; then
+    # commands to run if condition is true
+fi
+</code></pre><p>:::</p>
+<p>Let&rsquo;s look at a simple example that checks if a file exists:</p>
+<p>::: highlight</p>
+<pre tabindex="0"><code>if [ -f &#34;myfile.txt&#34; ]; then
+    echo &#34;myfile.txt exists&#34;
+else
+    echo &#34;myfile.txt does not exist&#34;
+fi
+</code></pre><p>:::</p>
+<p>The <code>[ -f &quot;myfile.txt&quot; ]</code> part is a test that returns true if <code>myfile.txt</code> exists and is a regular file. There are many different tests you can perform:</p>
+<ul>
+<li><code>-f file</code>: True if file exists and is a regular file</li>
+<li><code>-d dir</code>: True if dir exists and is a directory</li>
+<li><code>-x file</code>: True if file exists and is executable</li>
+<li><code>-r file</code>: True if file exists and is readable</li>
+<li><code>-w file</code>: True if file exists and is writable</li>
+<li><code>-z string</code>: True if string is empty</li>
+<li><code>-n string</code>: True if string is not empty</li>
+<li><code>string1 = string2</code>: True if string1 equals string2</li>
+<li><code>string1 != string2</code>: True if string1 does not equal string2</li>
+<li><code>num1 -eq num2</code>: True if num1 equals numerically num2</li>
+<li><code>num1 -ne num2</code>: True if num1 is not numerically equal to num2</li>
+<li><code>num1 -lt num2</code>: True if num1 is less than num2</li>
+<li><code>num1 -le num2</code>: True if num1 is less than or equal to num2</li>
+<li><code>num1 -gt num2</code>: True if num1 is greater than num2</li>
+<li><code>num1 -ge num2</code>: True if num1 is greater than or equal to num2</li>
+</ul>
+<p>You can also combine conditions using logical operators:</p>
+<ul>
+<li><code>&amp;&amp;</code> means AND</li>
+<li><code>||</code> means OR</li>
+<li><code>!</code> means NOT</li>
+</ul>
+<p>For example:</p>
+<p>::: highlight</p>
+<pre tabindex="0"><code>if [ -f &#34;myfile.txt&#34; ] &amp;&amp; [ -r &#34;myfile.txt&#34; ]; then
+    echo &#34;myfile.txt exists and is readable&#34;
+fi
+</code></pre><p>:::</p>
+<p>This will only execute the echo command if both conditions are true: the file exists AND it&rsquo;s readable.</p>
+<p>Another useful construct is the <code>case</code> statement, which is like a switch statement in other languages:</p>
+<p>::: highlight</p>
+<pre tabindex="0"><code>case &#34;$variable&#34; in
+    pattern1)
+        # commands to run if variable matches pattern1
+        ;;
+    pattern2)
+        # commands to run if variable matches pattern2
+        ;;
+    *)
+        # commands to run if variable doesn&#39;t match any pattern
+        ;;
+esac
+</code></pre><p>:::</p>
+<p>Here&rsquo;s a practical example that might determine what action to take based on a file&rsquo;s extension:</p>
+<p>::: highlight</p>
+<pre tabindex="0"><code>case &#34;$filename&#34; in
+    *.txt)
+        echo &#34;This is a text file&#34;
+        cat &#34;$filename&#34;
+        ;;
+    *.jpg|*.jpeg)
+        echo &#34;This is a JPEG image&#34;
+        ;;
+    *.mp3)
+        echo &#34;This is an MP3 audio file&#34;
+        ;;
+    *)
+        echo &#34;Unknown file type: $filename&#34;
+        ;;
+esac
+</code></pre><p>:::</p>
+<h2 id="heading-7">Bang! Bang! She-Bang!</h2>
+<p>We&rsquo;ve been talking about running commands in the shell, but how do we actually create reusable scripts that we can run over and over? This is where the &ldquo;shebang&rdquo; (or &ldquo;bang-bang&rdquo; as some call it) comes in.</p>
+<p>A shell script is simply a text file that contains a series of shell commands. To make it executable, you need to do two things:</p>
+<ol>
+<li>Add a shebang line at the very beginning of the file</li>
+<li>Make the file executable with the <code>chmod</code> command</li>
+</ol>
+<p>The shebang line looks like this:</p>
+<p>::: highlight</p>
+<pre tabindex="0"><code>#!/bin/bash
+</code></pre><p>:::</p>
+<p>This line must be the very first line in the file (no spaces or characters before it). It tells the operating system which interpreter to use to run the script. In this case, we&rsquo;re specifying that the script should be run using <code>/bin/bash</code>.</p>
+<p>You could also use other shells:</p>
+<ul>
+<li><code>#!/bin/sh</code> for the Bourne shell or a compatible shell</li>
+<li><code>#!/usr/bin/env python3</code> for Python 3 (though this wouldn&rsquo;t be a bash script)</li>
+<li><code>#!/usr/bin/env perl</code> for Perl</li>
+</ul>
+<p>Using <code>/usr/bin/env</code> is often preferred because it&rsquo;s more portable across different systems:</p>
+<p>::: highlight</p>
+<pre tabindex="0"><code>#!/usr/bin/env bash
+</code></pre><p>:::</p>
+<p>This tells the system to find the <code>bash</code> executable using the user&rsquo;s <code>PATH</code>, which is more flexible than hardcoding a path like <code>/bin/bash</code>.</p>
+<p>Let&rsquo;s create a simple example script. We&rsquo;ll make a script that backs up a file by copying it with a timestamp:</p>
+<p>::: highlight</p>
+<pre tabindex="0"><code>#!/usr/bin/env bash
+
+# Simple backup script
+
+if [ $# -ne 1 ]; then
+    echo &#34;Usage: $0 filename&#34;
+    exit 1
+fi
+
+if [ ! -f &#34;$1&#34; ]; then
+    echo &#34;Error: File &#39;$1&#39; not found&#34;
+    exit 1
+fi
+
+TIMESTAMP=$(date +%Y%m%d_%H%M%S)
+BACKUP=&#34;$1.$TIMESTAMP.bak&#34;
+
+cp &#34;$1&#34; &#34;$BACKUP&#34;
+
+echo &#34;Backup created: $BACKUP&#34;
+</code></pre><p>:::</p>
+<p>Let&rsquo;s break down what this script does:</p>
+<ol>
+<li><code>#!/usr/bin/env bash</code> - The shebang line that tells the system to use bash to run this script</li>
+<li><code># Simple backup script</code> - A comment (lines starting with # are comments in bash)</li>
+<li><code>if [ $# -ne 1 ]; then</code> - Checks if the number of arguments ($#) is not equal to 1</li>
+<li><code>echo &quot;Usage: $0 filename&quot;</code> - Prints a usage message ($0 is the name of the script)</li>
+<li><code>exit 1</code> - Exits the script with an error code (1 indicates an error)</li>
+<li><code>if [ ! -f &quot;$1&quot; ]; then</code> - Checks if the first argument ($1) is not a file</li>
+<li><code>TIMESTAMP=$(date +%Y%m%d_%H%M%S)</code> - Creates a timestamp string in the format YYYYMMDD_HHMMSS</li>
+<li><code>BACKUP=&quot;$1.$TIMESTAMP.bak&quot;</code> - Constructs the backup filename</li>
+<li><code>cp &quot;$1&quot; &quot;$BACKUP&quot;</code> - Copies the original file to the backup file</li>
+<li><code>echo &quot;Backup created: $BACKUP&quot;</code> - Prints a success message</li>
+</ol>
+<p>To use this script, you would:</p>
+<ol>
+<li>Save it to a file (for example, <code>backup.sh</code>)</li>
+<li>Make it executable: <code>chmod +x backup.sh</code></li>
+<li>Run it: <code>./backup.sh important_document.txt</code></li>
+</ol>
+<p>The <code>chmod +x</code> command makes the file executable. The <code>chmod</code> command is used to change file permissions, and the <code>+x</code> flag adds execute permission.</p>
+<p>You can also use octal notation with <code>chmod</code>:</p>
+<ul>
+<li><code>chmod 755 filename</code> gives read, write, and execute permissions to the owner, and read and execute permissions to group and others</li>
+<li><code>chmod 644 filename</code> gives read and write permissions to the owner, and read-only to group and others</li>
+</ul>
+<p>Now that we&rsquo;ve covered the basics of bash scripting, you have enough knowledge to start creating your own useful scripts to automate tasks on your system. Remember that the best way to learn is by doing - try creating small scripts to automate repetitive tasks you encounter in your daily work.</p>
+<p>As you continue to explore bash, you&rsquo;ll discover more advanced features like arrays, functions, and more sophisticated flow control structures. But even with what we&rsquo;ve covered here, you can already create scripts that will save you time and effort.</p>
+<p>Happy scripting!
+:::::::::::::::::::::::::::::::::::::::::</p>
+
+  
+</article>
+
+  </main>
+  <footer class="site-footer">
+    <p>© 2026 Devanand P A • Built with Hugo</p>
+  </footer>
+</body>
+</html>

@@ -64,7 +64,6 @@ Well, like I said ,most shells follow some basic rules.
 
   (in general, if the first argument is not a shell function/builtin/alias, then it is treated as a filepath, and the shell checks if it is executable. If it is , it tries to run the program specified in the filepath. In case you provide something that does not fulfil any of these conditions, the shell will just give you an error)
 
-## The Shell as a File Manager {#heading-3}
 
 ## The Shell as a File Manager {#heading-3}
 
