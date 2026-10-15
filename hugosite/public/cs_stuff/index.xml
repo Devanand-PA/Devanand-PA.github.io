@@ -1,24 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
-		<title>Cs_stuffs on Devanand P A</title>
+		<title>Some CS Stuff on Devanand P A</title>
 		<link>http://localhost:1313/cs_stuff/</link>
-		<description>Recent content in Cs_stuffs on Devanand P A</description>
+		<description>Recent content in Some CS Stuff on Devanand P A</description>
 		<generator>Hugo</generator>
 		<language>en-us</language>
 		
 		
 		
 		
-			<lastBuildDate>Thu, 15 Oct 2026 07:53:04 +0000</lastBuildDate>
+			<lastBuildDate></lastBuildDate>
 		
 			<atom:link href="http://localhost:1313/cs_stuff/index.xml" rel="self" type="application/rss+xml" />
-			<item>
-				<title>Table of Contents</title>
-				<link>http://localhost:1313/cs_stuff/bash_scripting/intro/</link>
-				<pubDate>Thu, 15 Oct 2026 07:53:04 +0000</pubDate>
-				<guid>http://localhost:1313/cs_stuff/bash_scripting/intro/</guid>
-				<description>&lt;p&gt;&lt;code&gt;&amp;lt;style&amp;gt; code { background-color : #000000; } &amp;lt;/style&amp;gt;&lt;/code&gt;{=html}&lt;/p&gt;&#xA;&lt;h1 id=&#34;ToC_link&#34;&gt;Table of Contents&lt;/h1&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#ToC_link&#34;&gt;Table of Contents&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#heading-1&#34;&gt;About the Terminal&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#heading-2&#34;&gt;About the Shell&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;&#34;&gt;The Shell as a File Manager&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;&#34;&gt;Running Commands in the Shell&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;&#34;&gt;The PATH to commands&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;&#34;&gt;simple logic in bash&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;&#34;&gt;Bang! Bang! She-Bang!&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;heading-1&#34;&gt;About the Terminal&lt;/h2&gt;&#xA;&lt;p&gt;If you&#39;re reading this, chances are that you have come across a terminal already. A terminal is , at the most basic level, some medium that displays some kind of information. When we talk about the first computers, which were made well over half a century ago, we talk about terminals that used paper to produce output and used punched cards to take input.&lt;/p&gt;</description>
-			</item>
 	</channel>
 </rss>

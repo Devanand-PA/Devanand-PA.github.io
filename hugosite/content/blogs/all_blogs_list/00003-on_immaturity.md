@@ -9,7 +9,6 @@ date: 2026-10-15T07:53:05Z
 
 \
 
-::: blog_context
 It has been quite some time , I guess.
 
 For a good part of my life , I have been searching for a meaning of existence. I guess I started that when I was five years old. I had not then been introduced to the concept of a god , but had been introduced to books on outer space. Back then I had read through those books with utmost curiosity. In one of those books (I guess it was \"Space Encyclopaedia\" by DK Publications which I read when I was about seven years old) I came upon an artist\'s impression of the multiverse. The figure showed many multicoloured bubbles of varying sizes, each representing a universe , set against a dark background. To be fair, that image was beautiful. I could put that image as my wallpaper even now and not be bored by it. But it was not just the visual beauty of it that attracted me to it. It was also what it stood for.

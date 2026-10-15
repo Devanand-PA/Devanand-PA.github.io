@@ -23,16 +23,31 @@
     <loc>http://localhost:1313/blogs/all_blogs_list/00002-jobintro/</loc>
     <lastmod>2026-10-15T07:53:05+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/cs_stuff/bash_scripting/</loc>
+    <lastmod>2026-10-15T07:53:04+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/cs_stuff/llms/</loc>
+    <lastmod>2026-10-15T07:53:04+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/cs_stuff/python_scripting/</loc>
+    <lastmod>2026-10-15T07:53:04+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/cs_stuff/</loc>
     <lastmod>2026-10-15T07:53:04+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/cs_stuff/bash_scripting/intro/</loc>
     <lastmod>2026-10-15T07:53:04+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/literature/dendaro/</loc>
+    <lastmod>2026-10-15T07:53:02+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/literature/why-am-i-under-equipped-even-though-my-life-is-below-my-expectations-/chapter_001/001/</loc>
     <lastmod>2026-10-15T07:53:02+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/literature/</loc>
+    <lastmod>2026-10-15T07:53:02+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/literature/multiroz/</loc>
     <lastmod>2026-10-15T07:53:02+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/literature/dendaro/dendaro/</loc>

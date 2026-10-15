@@ -30,7 +30,7 @@
           <div class="dropdown-content">
             <a href="{{ "cs_stuff/bash_scripting/" | relURL }}">Bash Scripting</a>
             <a href="{{ "cs_stuff/python_scripting/" | relURL }}">Python Scripting</a>
-            <a href="{{ "cs_stuff/LLMs/" | relURL }}">LLMs</a>
+            <a href="{{ "cs_stuff/llms/" | relURL }}">LLMs</a>
           </div>
         </div>
         <div class="dropdown">
@@ -60,38 +60,64 @@
     </div>
   </section>
 
+  <!-- Front section: "Some interesting things to read/watch" prominent -->
   <section class="updates" id="updates">
-    <h2>Latest Updates</h2>
-    {{ $pages := where .Site.RegularPages "Type" "in" (slice "blogs" "literature" "cs_stuff") }}
-    <p class="meta">Found {{ $pages | len }} pages.</p>
-    {{ $pages := $pages | first 10 }}
+    <h2>Some interesting things to read/watch</h2>
     <ul class="update-list">
-      {{ range $pages }}
-      <li>
-        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-        <small> — {{ .Date.Format "Jan 2, 2006" }}</small>
-      </li>
-      {{ end }}
+      <li><a href="https://www.youtube.com/watch?v=3mhd98AGNXQ">A RISC-V laptop... Yeah. (Video)</a></li>
+      <li><a href="https://github.com/jeffheaton/app_generative_ai">A course on generative AI by Washington University in St. Louis (Git Interface)</a></li>
+      <li><a href="https://vonheikemen.github.io/devlog/tools/using-vim-abbreviations/">An introduction to vim abbrevations (Website)</a></li>
+      <li><a href='https://youtu.be/IM2VIKfaY0Y'>An account of Western perception of Japanese culture (Video)</a></li>
+      <li><a href="https://libreboot.org/faq.html#intelme">A Brief Introduction to the Intel Management Engine (Documentation)</a></li>
+      <li><a href="https://www.tofugu.com/learn-japanese/">A good place to learn japanese (Website)</a></li>
+      <li><a href="https://www.youtube.com/watch?v=nIwdhPOVOUk">A brief history of the creation of the ARM architecture. (Video)</a></li>
+      <li><a href="https://sites.google.com/stanford.edu/soldering-internal/learning">A good place to learn soldering (Website)</a></li>
+      <li><a href="https://youtu.be/SRoJGmnay0E">Probably the best thinkpads (Video)</a></li>
+      <li><a href="https://c3n7.tech/posts/mapping-huion-keys-on-linux/">Mapping wacom/huion/xp-pen tablet keys on linux (Website)</a></li>
+      <li><a href="https://www.damtp.cam.ac.uk/user/tong/qft.html">A good place to learn Graduate level Physics I guess (Website)</a></li>
     </ul>
   </section>
+
+  <!-- Latest Updates as a sidebar on the right -->
+  <aside class="sidebar-updates">
+    <h2>Latest Updates</h2>
+    <p class="meta">Found 7 pages.</p>
+    <ul class="update-list">
+      <li>
+        <a href="/blogs/all_blogs_list/00001-intro/">Basically , me</a>
+        <small> — Oct 15, 2026</small>
+      </li>
+      <li>
+        <a href="/blogs/all_blogs_list/">Here are all blog posts so far (Most of them are rants about things that nobody cares about.) :</a>
+        <small> — Oct 15, 2026</small>
+      </li>
+      <li>
+        <a href="/blogs/highlighted/">Here are some good blog posts:</a>
+        <small> — Oct 15, 2026</small>
+      </li>
+      <li>
+        <a href="/cs_stuff/bash_scripting/">Table of Contents</a>
+        <small> — Oct 15, 2026</small>
+      </li>
+      <li>
+        <a href="/literature/why-am-i-under-equipped-even-though-my-life-is-below-my-expectations-/chapter_001/001/">Dreams. Expectations.Hopes.</a>
+        <small> — Oct 15, 2026</small>
+      </li>
+      <li>
+        <a href="/literature/dendaro/dendaro/">This is a list of Dendaro chapters that I have written</a>
+        <small> — Oct 15, 2026</small>
+      </li>
+      <li>
+        <a href="/literature/multiroz/multiroz/">This is a list of Multiroz chapters that I have written</a>
+        <small> — Oct 15, 2026</small>
+      </li>
+    </ul>
+  </aside>
 
   <section class="side-content">
     <div class="side-columns">
       <div class="side-column left">
-        <h2>Some interesting things to read/watch</h2>
-        <ul>
-          <li><a href="https://www.youtube.com/watch?v=3mhd98AGNXQ">A RISC-V laptop... Yeah. (Video)</a></li>
-          <li><a href="https://github.com/jeffheaton/app_generative_ai">A course on generative AI by Washington University in St. Louis (Git Interface)</a></li>
-          <li><a href="https://vonheikemen.github.io/devlog/tools/using-vim-abbreviations/">An introduction to vim abbrevations (Website)</a></li>
-          <li><a href='https://youtu.be/IM2VIKfaY0Y'>An account of Western perception of Japanese culture (Video)</a></li>
-          <li><a href="https://libreboot.org/faq.html#intelme">A Brief Introduction to the Intel Management Engine (Documentation)</a></li>
-          <li><a href="https://www.tofugu.com/learn-japanese/">A good place to learn japanese (Website)</a></li>
-          <li><a href="https://www.youtube.com/watch?v=nIwdhPOVOUk">A brief history of the creation of the ARM architecture. (Video)</a></li>
-          <li><a href="https://sites.google.com/stanford.edu/soldering-internal/learning">A good place to learn soldering (Website)</a></li>
-          <li><a href="https://youtu.be/SRoJGmnay0E">Probably the best thinkpads (Video)</a></li>
-          <li><a href="https://c3n7.tech/posts/mapping-huion-keys-on-linux/">Mapping wacom/huion/xp-pen tablet keys on linux (Website)</a></li>
-          <li><a href="https://www.damtp.cam.ac.uk/user/tong/qft.html">A good place to learn Graduate level Physics I guess (Website)</a></li>
-        </ul>
+        <!-- "interesting things" moved to front above -->
       </div>
       <div class="side-column right">
         <h2>Some highlights on this page</h2>
@@ -103,12 +129,11 @@
       </div>
     </div>
   </section>
-  {{ else }}
+  {{ end }}
+
   <main class="content">
     {{ block "main" . }}{{ end }}
   </main>
-  {{ end }}
-
   <footer class="site-footer">
     <p>© {{ now.Format "2006" }} Devanand P A • Built with Hugo</p>
   </footer>
