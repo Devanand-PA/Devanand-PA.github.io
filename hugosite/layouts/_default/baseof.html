@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} – {{ .Site.Title }}{{ end }}</title>
+  <link rel="icon" href="{{ "devnull_favicon.webp" | absURL }}">
+  <link rel="stylesheet" href="{{ "style.css" | absURL }}">
+</head>
+<body>
+  <header>
+    <a href="{{ "index.html" | absURL }}"><img class="logo" src="{{ "devnull.webp" | absURL }}" alt="logo"></a>
+    <h1>Here are some things I do <br> (For all the 5 people in the world who care about that , and that list does not include me):</h1>
+    <!-- navigation dropdowns -->
+    <div class="dropdown">
+      <button class="dropbtn">Literature</button>
+      <div class="dropdown-content">
+        <a href="./literature/multiroz/multiroz.html">Multiroz WebNovel</a>
+        <a href="./literature/dendaro/dendaro.html">Dendaro WebNovel</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">Some CS Stuff</button>
+      <div class="dropdown-content">
+        <a href="./cs_stuff/bash_scripting/intro.html">Bash Scripting</a>
+        <a href="./cs_stuff/python_scripting/intro.html">Python Scripting</a>
+        <a href="./cs_stuff/LLMs/intro.html">LLMs</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">Blogs</button>
+      <div class="dropdown-content">
+        <a href="./blogs/highlighted.html">Highlighted blogs</a>
+        <a href="./blogs/all_blogs_list.html">All Blogs</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">Science Stuff</button>
+      <div class="dropdown-content">
+        <a href="./blogs/highlighted.html">Learning Classical Physics</a>
+        <a href="./blogs/all_blogs_list.html">Learning Electrodynamics</a>
+      </div>
+    </div>
+  </header>
+
+  {{ block "main" . }}{{ end }}
+</body>
+</html>
