@@ -81,16 +81,13 @@
 
   <section class="resume-section">
     <h2>Contact</h2>
-    <p class="placeholder placeholder-block">
-      [Placeholder: preferred contact method and availability. Replace the
-      email / phone / location / LinkedIn placeholders above with real values.]
     </p>
     {{ with .Params.contact }}
     <ul class="contact-list">
       <li>Email: <span class="placeholder">{{ .email }}</span></li>
-      <li>Phone: <span class="placeholder">{{ .phone }}</span></li>
+      <!-- <li>Phone: <span class="placeholder">{{ .phone }}</span></li> -->
       <li>Location: <span class="placeholder">{{ .location }}</span></li>
-      <li>LinkedIn: <span class="placeholder">{{ .linkedin }}</span></li>
+      <!-- <li>LinkedIn: <span class="placeholder">{{ .linkedin }}</span></li> -->
       <li>GitHub: <a href="{{ $.Params.github_url }}" target="_blank" rel="noopener">github.com/{{ $.Params.github_user }}</a></li>
     </ul>
     {{ end }}
@@ -98,7 +95,6 @@
 
   {{ with .Content }}
   <section class="resume-section">
-    <h2>Notes</h2>
     {{ . }}
   </section>
   {{ end }}

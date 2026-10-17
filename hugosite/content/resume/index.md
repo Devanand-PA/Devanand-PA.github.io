@@ -6,31 +6,27 @@ draft: false
 # ------------------------------------------------------------------
 # Header
 # ------------------------------------------------------------------
-tagline: 'Nothing Really. — [Placeholder: one-line professional tagline, e.g. "Physics undergrad who writes Rust and lives in a tiling WM"]'
+tagline: 'Nothing Really.'
 github_user: "Devanand-PA"
 github_url: "https://github.com/Devanand-PA"
 github_stats: "11 public repositories · on GitHub since Aug 2022 · last synced Oct 17, 2026"
 
 # ------------------------------------------------------------------
-# Contact — ALL PLACEHOLDERS, replace with real details
+# Contact
 # ------------------------------------------------------------------
 contact:
-  email: "[Placeholder: your.email@example.com]"
-  phone: "[Placeholder: +91 XXXXX XXXXX]"
-  location: "[Placeholder: City, State, India]"
-  linkedin: "[Placeholder: linkedin.com/in/your-handle]"
-  linkedin_url: "#"
+  email: "devanandpa721@gmail.com"
+  location: "[Chenturuthy, Thrissur, Kerala, India]"
 
 # ------------------------------------------------------------------
-# About — GitHub bio + placeholder for a real summary
+# About — GitHub bio
 # ------------------------------------------------------------------
 summary_bio: 'Nothing Really.'
-summary_placeholder: '[Placeholder: Replace with a 2–3 line professional summary — who you are, what you build, what you are looking for.]'
 
 # ------------------------------------------------------------------
 # Projects — snapshot of public, non-fork GitHub repos (Oct 17, 2026)
 # ------------------------------------------------------------------
-projects_note: 'Everything below is pulled from my public GitHub repos. [Placeholder: optional one-liner on what you would highlight to a recruiter.]'
+projects_note: 'Everything below is pulled from my public GitHub repos.'
 projects:
   - name: "egiv.rs"
     url: "https://github.com/Devanand-PA/egiv.rs"
@@ -79,7 +75,7 @@ projects:
     meta: "GPL-3.0 · 1 star · updated Jun 2024"
 
 # ------------------------------------------------------------------
-# Skills — languages visible across GitHub repos + placeholder
+# Skills — languages visible across GitHub repos
 # ------------------------------------------------------------------
 skills_github:
   - "Python"
@@ -91,35 +87,23 @@ skills_github:
   - "HTML/CSS"
   - "Git"
   - "Linux"
-skills_placeholder: '[Placeholder: add frameworks, tools and domains that do not show up on GitHub — e.g. PyTorch, LaTeX, Vim/Neovim, distro packaging, etc.]'
 
 # ------------------------------------------------------------------
-# Education — ALL PLACEHOLDERS
+# Education
 # ------------------------------------------------------------------
 education:
-  - degree: "[Placeholder: Degree / Program]"
-    org: "[Placeholder: Institution]"
-    when: "[Placeholder: Year – Year]"
+  - degree: "[BSc]"
+    org: "[Indian Institute of Science Education and Research, Tirupati]"
+    when: "[2021-2026]"
     points:
-      - "[Placeholder: relevant coursework, projects, GPA (optional), achievements.]"
+      - "[CGPA : 5.5]"
 
 # ------------------------------------------------------------------
-# Experience — ALL PLACEHOLDERS
+# Experience
 # ------------------------------------------------------------------
-experience:
-  - role: "[Placeholder: Role / Position]"
-    org: "[Placeholder: Company / Organisation / Lab]"
-    when: "[Placeholder: Month Year – Month Year]"
-    points:
-      - "[Placeholder: what you did, the tech you used, and the impact.]"
-      - "[Placeholder: another achievement, with a number if possible.]"
+
+
 ---
 
 ## Notes
 
-This page is a **first draft of my resume**. Real content so far: name, GitHub
-profile, and public repositories — everything else is a placeholder to be filled
-in later.
-
-[Placeholder: anything else you want on the page — certifications, awards,
-talks, a downloadable PDF link, etc.]
