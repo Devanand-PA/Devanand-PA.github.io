@@ -1,0 +1,5 @@
+# Hugo build output — the real deploy is built by .github/workflows/hugo.yml
+/hugosite/public/
+
+# Hugo lock files
+.hugo_build.lock
