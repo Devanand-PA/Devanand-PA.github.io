@@ -1,0 +1,106 @@
+{{ define "main" }}
+<div class="resume">
+  <header class="resume-header">
+    {{ $avatarURL := "https://avatars.githubusercontent.com/u/112339148?v=4" }}
+    {{ with .Resources.Get "avatar.jpg" }}{{ $avatarURL = .RelPermalink }}{{ end }}
+    <img class="resume-avatar" src="{{ $avatarURL }}" alt="GitHub avatar of {{ .Params.github_user }}">
+    <div class="resume-id">
+      <h1>{{ .Title }}</h1>
+      <p class="resume-tagline">{{ .Params.tagline }}</p>
+      <p class="resume-links">
+        <a href="{{ .Params.github_url }}" target="_blank" rel="noopener">github.com/{{ .Params.github_user }}</a>
+        {{ with .Params.contact }}
+        <span class="sep">•</span> <span class="placeholder">{{ .email }}</span>
+        <span class="sep">•</span> <span class="placeholder">{{ .phone }}</span>
+        <span class="sep">•</span> <span class="placeholder">{{ .location }}</span>
+        {{ end }}
+      </p>
+      <p class="resume-meta">{{ .Params.github_stats }}</p>
+    </div>
+  </header>
+
+  <section class="resume-section">
+    <h2>About</h2>
+    <p><strong>GitHub bio:</strong> “{{ .Params.summary_bio }}”</p>
+    <p class="placeholder placeholder-block">{{ .Params.summary_placeholder }}</p>
+  </section>
+
+  <section class="resume-section">
+    <h2>Projects <small class="section-sub">— from GitHub</small></h2>
+    <p class="section-note">{{ .Params.projects_note }}</p>
+    <ul class="resume-projects">
+      {{ range .Params.projects }}
+      <li>
+        <div class="project-head">
+          <a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a>
+          <span class="project-lang">{{ .lang }}</span>
+        </div>
+        <p class="project-desc">{{ .desc }}</p>
+        <p class="project-meta">{{ .meta }}</p>
+      </li>
+      {{ end }}
+    </ul>
+  </section>
+
+  <section class="resume-section">
+    <h2>Skills</h2>
+    <p class="section-note">Languages and tools visible across my GitHub repos:</p>
+    <ul class="chip-list">
+      {{ range .Params.skills_github }}
+      <li class="chip">{{ . }}</li>
+      {{ end }}
+    </ul>
+    <p class="placeholder placeholder-block">{{ .Params.skills_placeholder }}</p>
+  </section>
+
+  <section class="resume-section">
+    <h2>Education</h2>
+    {{ range .Params.education }}
+    <div class="resume-item">
+      <h3>{{ .degree }}</h3>
+      <p class="when">{{ .org }} — <span class="placeholder">{{ .when }}</span></p>
+      <ul>
+        {{ range .points }}<li>{{ . }}</li>{{ end }}
+      </ul>
+    </div>
+    {{ end }}
+  </section>
+
+  <section class="resume-section">
+    <h2>Experience</h2>
+    {{ range .Params.experience }}
+    <div class="resume-item">
+      <h3>{{ .role }} <span class="placeholder">{{ .org }}</span></h3>
+      <p class="when"><span class="placeholder">{{ .when }}</span></p>
+      <ul>
+        {{ range .points }}<li>{{ . }}</li>{{ end }}
+      </ul>
+    </div>
+    {{ end }}
+  </section>
+
+  <section class="resume-section">
+    <h2>Contact</h2>
+    <p class="placeholder placeholder-block">
+      [Placeholder: preferred contact method and availability. Replace the
+      email / phone / location / LinkedIn placeholders above with real values.]
+    </p>
+    {{ with .Params.contact }}
+    <ul class="contact-list">
+      <li>Email: <span class="placeholder">{{ .email }}</span></li>
+      <li>Phone: <span class="placeholder">{{ .phone }}</span></li>
+      <li>Location: <span class="placeholder">{{ .location }}</span></li>
+      <li>LinkedIn: <span class="placeholder">{{ .linkedin }}</span></li>
+      <li>GitHub: <a href="{{ $.Params.github_url }}" target="_blank" rel="noopener">github.com/{{ $.Params.github_user }}</a></li>
+    </ul>
+    {{ end }}
+  </section>
+
+  {{ with .Content }}
+  <section class="resume-section">
+    <h2>Notes</h2>
+    {{ . }}
+  </section>
+  {{ end }}
+</div>
+{{ end }}
