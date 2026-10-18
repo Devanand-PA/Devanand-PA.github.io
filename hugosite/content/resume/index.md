@@ -92,11 +92,24 @@ skills_github:
 # Education
 # ------------------------------------------------------------------
 education:
-  - degree: "[BSc]"
-    org: "[Indian Institute of Science Education and Research, Tirupati]"
-    when: "[2021-2026]"
-    points:
-      - "[CGPA : 5.5]"
+    - degree: "[BSc]"
+        org: "[Indian Institute of Science Education and Research, Tirupati]"
+        when: "[2021-2026]"
+        points:
+            - "[CGPA : 5.5]"
+    - 12th : "[Kerala State Board]"
+        org : "[AKMHSS Poyya]"
+        when : "[2019-2021]"
+        points :
+            - Marks "1198/1200 (99.83%)"
+
+    - 10th : "[CBSE]"
+        org : "[Sree Sai Vidhya Peedhom , Anthikkad]"
+        when : "[2018-2019]"
+        points :
+            - Percentage : 92 %
+
+
 
 # ------------------------------------------------------------------
 # Experience
