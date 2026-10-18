@@ -10,26 +10,27 @@
       <p class="resume-links">
         <a href="{{ .Params.github_url }}" target="_blank" rel="noopener">github.com/{{ .Params.github_user }}</a>
         {{ with .Params.contact }}
-        <span class="sep">•</span> <span class="placeholder">{{ .email }}</span>
-        <span class="sep">•</span> <span class="placeholder">{{ .phone }}</span>
-        <span class="sep">•</span> <span class="placeholder">{{ .location }}</span>
+          {{ with .email }}<span class="sep">&bull;</span> <span>{{ . }}</span>{{ end }}
+          {{ with .location }}<span class="sep">&bull;</span> <span>{{ . }}</span>{{ end }}
         {{ end }}
       </p>
-      <p class="resume-meta">{{ .Params.github_stats }}</p>
+      {{ with .Params.github_stats }}<p class="resume-meta">{{ . }}</p>{{ end }}
     </div>
   </header>
 
+  {{ with .Params.summary_bio }}
   <section class="resume-section">
     <h2>About</h2>
-    <p><strong>GitHub bio:</strong> “{{ .Params.summary_bio }}”</p>
-    <p class="placeholder placeholder-block">{{ .Params.summary_placeholder }}</p>
+    <p><strong>GitHub bio:</strong> &ldquo;{{ . }}&rdquo;</p>
   </section>
+  {{ end }}
 
+  {{ with .Params.projects }}
   <section class="resume-section">
-    <h2>Projects <small class="section-sub">— from GitHub</small></h2>
-    <p class="section-note">{{ .Params.projects_note }}</p>
+    <h2>Projects <small class="section-sub">&mdash; from GitHub</small></h2>
+    {{ with $.Params.projects_note }}<p class="section-note">{{ . }}</p>{{ end }}
     <ul class="resume-projects">
-      {{ range .Params.projects }}
+      {{ range . }}
       <li>
         <div class="project-head">
           <a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a>
@@ -41,57 +42,62 @@
       {{ end }}
     </ul>
   </section>
+  {{ end }}
 
+  {{ with .Params.skills_github }}
   <section class="resume-section">
     <h2>Skills</h2>
     <p class="section-note">Languages and tools visible across my GitHub repos:</p>
     <ul class="chip-list">
-      {{ range .Params.skills_github }}
-      <li class="chip">{{ . }}</li>
-      {{ end }}
+      {{ range . }}<li class="chip">{{ . }}</li>{{ end }}
     </ul>
-    <p class="placeholder placeholder-block">{{ .Params.skills_placeholder }}</p>
   </section>
+  {{ end }}
 
+  {{ with .Params.education }}
   <section class="resume-section">
     <h2>Education</h2>
-    {{ range .Params.education }}
+    {{ range . }}
     <div class="resume-item">
       <h3>{{ .degree }}</h3>
-      <p class="when">{{ .org }} — <span class="placeholder">{{ .when }}</span></p>
+      <p class="when">{{ .org }} &mdash; {{ .when }}</p>
+      {{ with .points }}
       <ul>
-        {{ range .points }}<li>{{ . }}</li>{{ end }}
+        {{ range . }}<li>{{ . }}</li>{{ end }}
       </ul>
+      {{ end }}
     </div>
     {{ end }}
   </section>
+  {{ end }}
 
+  {{ with .Params.experience }}
   <section class="resume-section">
     <h2>Experience</h2>
-    {{ range .Params.experience }}
+    {{ range . }}
     <div class="resume-item">
-      <h3>{{ .role }} <span class="placeholder">{{ .org }}</span></h3>
-      <p class="when"><span class="placeholder">{{ .when }}</span></p>
+      <h3>{{ .role }}</h3>
+      <p class="when">{{ .org }} &mdash; {{ .when }}</p>
+      {{ with .points }}
       <ul>
-        {{ range .points }}<li>{{ . }}</li>{{ end }}
+        {{ range . }}<li>{{ . }}</li>{{ end }}
       </ul>
+      {{ end }}
     </div>
     {{ end }}
   </section>
+  {{ end }}
 
+  {{ with .Params.contact }}
   <section class="resume-section">
     <h2>Contact</h2>
-    </p>
-    {{ with .Params.contact }}
     <ul class="contact-list">
-      <li>Email: <span class="placeholder">{{ .email }}</span></li>
-      <!-- <li>Phone: <span class="placeholder">{{ .phone }}</span></li> -->
-      <li>Location: <span class="placeholder">{{ .location }}</span></li>
-      <!-- <li>LinkedIn: <span class="placeholder">{{ .linkedin }}</span></li> -->
+      {{ with .email }}<li>Email: <a href="mailto:{{ . }}">{{ . }}</a></li>{{ end }}
+      {{ with .location }}<li>Location: {{ . }}</li>{{ end }}
       <li>GitHub: <a href="{{ $.Params.github_url }}" target="_blank" rel="noopener">github.com/{{ $.Params.github_user }}</a></li>
     </ul>
-    {{ end }}
   </section>
+  {{ end }}
 
   {{ with .Content }}
   <section class="resume-section">

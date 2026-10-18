@@ -194,7 +194,7 @@ article h2{margin-top:2rem}
 .resume-id h1{margin:0 0 .2rem;font-size:2rem}
 .resume-tagline{color:var(--muted);margin:.2rem 0 .8rem}
 .resume-links{display:flex;flex-wrap:wrap;gap:.4rem .6rem;align-items:center;font-size:.95rem;margin:.2rem 0}
-.resume-links .sep{color:var(--border)}
+.resume-links .sep{color:var(--muted)}
 .resume-meta{color:var(--muted);font-size:.85rem;margin:.3rem 0 0}
 .resume-section{
   background:var(--bg-card);border:1px solid var(--border);
@@ -229,18 +229,6 @@ article h2{margin-top:2rem}
 .resume-item .when{color:var(--muted);font-size:.92rem;margin:.1rem 0}
 .resume-item ul{margin:.45rem 0 0;padding-left:1.25rem}
 .contact-list{list-style:none;padding:0;margin:.8rem 0 0;display:grid;gap:.35rem}
-
-/* Placeholders */
-.placeholder{
-  color:#d9b45b;
-  background:rgba(217,180,91,.08);
-  border:1px dashed rgba(217,180,91,.55);
-  border-radius:8px;
-  padding:.1rem .45rem;
-  font-size:.88em;
-}
-.placeholder-block{display:block;padding:.6rem .8rem;font-size:.92rem;margin:.6rem 0 0}
-a.placeholder{color:#d9b45b}
 
 @media(max-width:640px){
   .resume-header{flex-direction:column;text-align:center}

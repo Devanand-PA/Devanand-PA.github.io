@@ -16,7 +16,7 @@ github_stats: "11 public repositories · on GitHub since Aug 2022 · last synced
 # ------------------------------------------------------------------
 contact:
   email: "devanandpa721@gmail.com"
-  location: "[Chenturuthy, Thrissur, Kerala, India]"
+  location: "Chenturuthy, Thrissur, Kerala, India"
 
 # ------------------------------------------------------------------
 # About — GitHub bio
@@ -92,31 +92,31 @@ skills_github:
 # Education
 # ------------------------------------------------------------------
 education:
-    - degree: "[BSc]"
-        org: "[Indian Institute of Science Education and Research, Tirupati]"
-        when: "[2021-2026]"
-        points:
-            - "[CGPA : 5.5]"
-    - 12th : "[Kerala State Board]"
-        org : "[AKMHSS Poyya]"
-        when : "[2019-2021]"
-        points :
-            - Marks "1198/1200 (99.83%)"
-
-    - 10th : "[CBSE]"
-        org : "[Sree Sai Vidhya Peedhom , Anthikkad]"
-        when : "[2018-2019]"
-        points :
-            - Percentage : 92 %
-
-
+  - degree: "BSc"
+    org: "Indian Institute of Science Education and Research, Tirupati"
+    when: "2021-2026"
+    points:
+      - "CGPA: 5.5"
+  - degree: "Senior Secondary (12th)"
+    org: "AKMHSS Poyya, Kerala State Board"
+    when: "2019-2021"
+    points:
+      - "Marks: 1198/1200 (99.83%)"
+  - degree: "Secondary (10th)"
+    org: "Sree Sai Vidhya Peedhom, Anthikkad, CBSE"
+    when: "2018-2019"
+    points:
+      - "Percentage: 92%"
 
 # ------------------------------------------------------------------
-# Experience
+# Experience — leave empty (or uncomment) until there is something
+# to show. The section is hidden automatically when it has no entries.
 # ------------------------------------------------------------------
-
-
+# experience:
+#   - role: "..."
+#     org: "..."
+#     when: "..."
+#     points:
+#       - "..."
 ---
-
-## Notes
 

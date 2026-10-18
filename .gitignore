@@ -1,5 +1,19 @@
 # Hugo build output — the real deploy is built by .github/workflows/hugo.yml
 /hugosite/public/
 
+# Stale build output committed at the repo root before CI took over.
+# The site lives in hugosite/ and is deployed from hugosite/public/, so a build
+# emitted at the root is a leftover. Regenerate with:
+#   hugo --source hugosite --baseURL "https://devanand-pa.github.io/"
+/blogs/
+/categories/
+/cs_stuff/
+/literature/
+/tags/
+/resume/
+/index.html
+/index.xml
+/sitemap.xml
+
 # Hugo lock files
 .hugo_build.lock
