@@ -9,7 +9,7 @@ draft: false
 tagline: 'Nothing Really.'
 github_user: "Devanand-PA"
 github_url: "https://github.com/Devanand-PA"
-github_stats: "11 public repositories · on GitHub since Aug 2022 · last synced Oct 17, 2026"
+github_stats: "11 public repositories · on GitHub since Aug 2022 · last synced Oct 26, 2026"
 
 # ------------------------------------------------------------------
 # Contact
@@ -21,17 +21,20 @@ contact:
 # ------------------------------------------------------------------
 # About — GitHub bio
 # ------------------------------------------------------------------
-summary_bio: 'Nothing Really.'
 
 # ------------------------------------------------------------------
 # Projects — snapshot of public, non-fork GitHub repos (Oct 17, 2026)
 # ------------------------------------------------------------------
-projects_note: 'Everything below is pulled from my public GitHub repos.'
 projects:
   - name: "egiv.rs"
     url: "https://github.com/Devanand-PA/egiv.rs"
     lang: "Rust"
     desc: "Combined image viewer (nsxiv-like) and image selector (dmenu-like), written in Rust with egui/eframe."
+    meta: "MIT license · updated Oct 2026"
+  - name: "anplomer"
+    url: "https://github.com/Devanand-PA/anplomer"
+    lang: "Java"
+    desc: "A combat based platformer game for android"
     meta: "MIT license · updated Oct 2026"
   - name: "python-pygame-games"
     url: "https://github.com/Devanand-PA/python-pygame-games"
@@ -78,21 +81,22 @@ projects:
 # Skills — languages visible across GitHub repos
 # ------------------------------------------------------------------
 skills_github:
-  - "Python"
-  - "Rust"
-  - "C"
-  - "C++"
-  - "Shell"
-  - "Jupyter Notebook"
-  - "HTML/CSS"
-  - "Git"
   - "Linux"
+  - "Shell"
+  - "Python"
+  - "Git"
+  - "HTML/CSS"
+  - "C"
+  - "Rust"
+  - "Java"
+  - "C++"
+  - "Jupyter Notebook"
 
 # ------------------------------------------------------------------
 # Education
 # ------------------------------------------------------------------
 education:
-  - degree: "BSc"
+  - degree: "3 year BSc"
     org: "Indian Institute of Science Education and Research, Tirupati"
     when: "2021-2026"
     points:
